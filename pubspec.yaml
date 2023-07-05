@@ -1,0 +1,23 @@
+name: kuis_hewan
+version: 0.1.0
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: ">=3.0.5 <4.0.0"
+
+dependencies:
+  get: 4.6.5
+  just_audio: ^0.9.34
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/
+    - assets/images/
