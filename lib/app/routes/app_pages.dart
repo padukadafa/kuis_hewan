@@ -8,7 +8,6 @@ import '../modules/animalTypes/bindings/animal_types_binding.dart';
 import '../modules/animalTypes/views/animal_types_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/quiz/bindings/quiz_binding.dart';
 import '../modules/quiz/views/quiz_view.dart';
 
 part 'app_routes.dart';
@@ -31,8 +30,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.QUIZ,
-      page: () => const QuizView(),
-      binding: QuizBinding(),
+      page: () => QuizView(),
     ),
     GetPage(
       name: _Paths.ANIMAL_LIST,
