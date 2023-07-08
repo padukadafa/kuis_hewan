@@ -19,8 +19,20 @@ class AnimalTypesView extends GetView<AnimalTypesController> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(
+                          Icons.arrow_back,
+                          size: 30,
+                        ),
+                      ),
+                    ),
                     const SizedBox(
-                      height: 100,
+                      height: 50,
                     ),
                     Container(
                       height: 50,

@@ -20,6 +20,18 @@ class AnimalListView extends GetView<AnimalListController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
+                alignment: Alignment.centerLeft,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back,
+                    size: 30,
+                  ),
+                ),
+              ),
+              Container(
                 margin: const EdgeInsets.only(left: 30, right: 30, top: 30),
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(

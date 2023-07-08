@@ -44,7 +44,8 @@ class _QuizViewState extends State<QuizView> {
 
   @override
   Widget build(BuildContext context) {
-    playAudio();
+    playAudio(speaker: "assets/audio/speaker.mp3");
+
     return Container(
       color: AppColors.background,
       child: SafeArea(
@@ -131,12 +132,17 @@ class _QuizViewState extends State<QuizView> {
     });
   }
 
-  playAudio({int? index}) async {
+  playAudio({int? index, String? speaker}) async {
     final Animal animal;
     if (index != null) {
       animal = animals[index];
     } else {
       animal = animals[_answerIndex];
+    }
+    player.stop();
+    if (speaker != null) {
+      await player.setAsset(speaker);
+      await player.play();
     }
     player.stop();
     await player.setAsset(animal.audioAsset);

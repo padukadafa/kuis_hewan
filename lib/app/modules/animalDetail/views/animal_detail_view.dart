@@ -18,15 +18,14 @@ class AnimalDetailView extends GetView<AnimalDetailController> {
             child: Column(
               children: [
                 Container(
-                  margin: const EdgeInsets.all(12),
-                  alignment: Alignment.centerRight,
+                  alignment: Alignment.centerLeft,
                   child: IconButton(
                     onPressed: () {
-                      controller.playAudio();
+                      Navigator.pop(context);
                     },
                     icon: const Icon(
-                      Icons.volume_up_outlined,
-                      size: 40,
+                      Icons.arrow_back,
+                      size: 30,
                     ),
                   ),
                 ),
@@ -43,6 +42,9 @@ class AnimalDetailView extends GetView<AnimalDetailController> {
                       )),
                 ),
                 InkWell(
+                  onTap: () {
+                    controller.playAudio();
+                  },
                   child: Container(
                     margin: const EdgeInsets.only(top: 10),
                     padding: const EdgeInsets.symmetric(
