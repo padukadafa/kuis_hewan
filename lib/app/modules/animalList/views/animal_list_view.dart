@@ -77,7 +77,7 @@ class AnimalListView extends GetView<AnimalListController> {
                   child: Center(
                     child: Obx(() {
                       return Wrap(
-                        alignment: WrapAlignment.start,
+                        alignment: WrapAlignment.center,
                         children: List.generate(
                             controller.animalList.value.length, (index) {
                           final Animal animal =
@@ -89,9 +89,9 @@ class AnimalListView extends GetView<AnimalListController> {
                               children: [
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.27,
+                                      MediaQuery.of(context).size.width * 0.25,
                                   height:
-                                      MediaQuery.of(context).size.width * 0.27,
+                                      MediaQuery.of(context).size.width * 0.25,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(12),
                                     color: Colors.white,

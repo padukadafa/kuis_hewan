@@ -18,6 +18,30 @@ class AnimalData {
       animalType: AnimalType.mamalia,
     ),
     Animal(
+      name: "Anjing",
+      audioAsset: "assets/audio/dog.wav",
+      image: "assets/images/dog.jpg",
+      animalType: AnimalType.mamalia,
+    ),
+    Animal(
+      name: "Anjing",
+      audioAsset: "assets/audio/dog.wav",
+      image: "assets/images/dog.jpg",
+      animalType: AnimalType.mamalia,
+    ),
+    Animal(
+      name: "Anjing",
+      audioAsset: "assets/audio/dog.wav",
+      image: "assets/images/dog.jpg",
+      animalType: AnimalType.mamalia,
+    ),
+    Animal(
+      name: "Anjing",
+      audioAsset: "assets/audio/dog.wav",
+      image: "assets/images/dog.jpg",
+      animalType: AnimalType.mamalia,
+    ),
+    Animal(
       name: "Ayam",
       audioAsset: "assets/audio/chicken.wav",
       image: "assets/images/chicken.jpg",
