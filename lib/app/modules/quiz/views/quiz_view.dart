@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:kuis_hewan/app/common/values/app_color.dart';
+import 'package:kuis_hewan/app/common/values/app_constant.dart';
 import 'package:kuis_hewan/app/data/dummy/animal.dart';
 import 'package:kuis_hewan/app/data/models/animal.dart';
 
@@ -51,46 +52,56 @@ class _QuizViewState extends State<QuizView> {
       child: SafeArea(
         child: Scaffold(
           backgroundColor: AppColors.background,
-          body: Column(
-            children: [
-              Container(
-                alignment: Alignment.centerRight,
-                child: IconButton(
-                  onPressed: () {
-                    playAudio();
-                  },
-                  icon: const Icon(Icons.volume_up),
-                ),
+          body: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(AppConstant.QUIZ_BACKGROUND),
+                fit: BoxFit.cover,
               ),
-              Expanded(
-                  child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: List.generate(
-                  3,
-                  (index) {
-                    return GestureDetector(
-                      onTap: () {
-                        checkAnswer(index);
-                      },
-                      child: Container(
-                        height: MediaQuery.of(context).size.height * 0.35,
-                        width: MediaQuery.of(context).size.height * 0.35,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12),
-                          image: DecorationImage(
-                            image: AssetImage(
-                              animals[index].image,
+            ),
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.centerRight,
+                  child: IconButton(
+                    onPressed: () {
+                      playAudio();
+                    },
+                    icon: const Icon(Icons.volume_up),
+                  ),
+                ),
+                Expanded(
+                    child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: List.generate(
+                    3,
+                    (index) {
+                      return GestureDetector(
+                        onTap: () {
+                          checkAnswer(index);
+                        },
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.35,
+                          width: MediaQuery.of(context).size.height * 0.35,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(12),
+                            image: DecorationImage(
+                              image: AssetImage(
+                                animals[index].image,
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            fit: BoxFit.cover,
                           ),
                         ),
-                      ),
-                    );
-                  },
-                ),
-              )),
-            ],
+                      );
+                    },
+                  ),
+                )),
+              ],
+            ),
           ),
         ),
       ),
