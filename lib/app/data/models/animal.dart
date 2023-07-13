@@ -8,6 +8,7 @@ enum AnimalType {
 class Animal {
   final String name;
   final String audioAsset;
+  final String quizAudioAsset;
   final String image;
   final AnimalType animalType;
   Animal({
@@ -15,5 +16,6 @@ class Animal {
     required this.audioAsset,
     required this.image,
     required this.animalType,
+    required this.quizAudioAsset,
   });
 }

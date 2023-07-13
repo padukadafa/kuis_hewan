@@ -23,7 +23,7 @@ class AnimalDetailController extends GetxController {
 
   playAudio() async {
     final player = AudioPlayer();
-    await player.setUrl("asset:${animal.audioAsset}");
+    await player.setUrl("asset:${animal.quizAudioAsset}");
 
     player.play();
   }
